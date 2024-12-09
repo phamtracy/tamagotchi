@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="HTML, CSS, JavaScript, CSS481, Tamagotchi">
+    <title>MyTamaFriend</title>
+    <link rel="icon" href="tamagotchiLightBlueIcon.png">
+    <link rel="stylesheet" href="tamagotchi.css">
+  </head>
+  <body>
+    <div class="egg">
+      <h1 class="tamagotchi-name">Mametchi</h1>
+      <h2 class="tamagotchi-age" style="position: fixed; top: 50px; left: 10px;">
+      </h2> 
+
+      <div class="screen">
+        <div class="headerBtns"> 
+          <button id="eat" class="btnIcon"><img src="./icons/eat-icon.png" alt="Eat"></button> <!--Eat-->
+          <button id="play" class="btnIcon"><img src="./icons/play-icon.png" alt="Play"></button> <!--Play-->
+          <button id="heal" class="btnIcon"><img src="./icons/heal-icon.png" alt="Heal"></button> <!--Heal-->
+        </div>
+
+        <div id="screenContent" class="screenContent">
+          <div id="statsContainer" class="statsContainer" style="display: none;">
+            <div id="stats" class="stats"></div>
+            <p id="time">Time: 00:00:00</p>
+            <p id="age">Age: 0 yr(s) old</p>
+            <p id="timer">Stats: loading...</p>
+          </div>
+          <button id="food1" class="foodItem" ><img src="./food/hotdogImage.png" alt="hotdog"></button>
+          <button id="food2" class="foodItem"><img src="./food/pizzaImage.png" alt="pizza"></button>
+          <button id="food3" class="foodItem"><img src="./food/sandwichImage.png" alt="sandwich"></button>
+          <button id="food4" class="foodItem"><img src="./food/sushiImage.png" alt="sushi"></button>
+          <button id="food5" class="foodItem"><img src="./food/burgerImage.png" alt="burger"></button>
+          <img id="action" class="tamagotchi-character" src="mametchi.webp" alt="action error nooo">
+        </div>
+
+        <div class="footerBtns">
+          <button id="duck" class="btnIcon"><img src="./icons/duck-icon.png" alt="Duck"></button> <!--Duck-->
+          <button id="health" class="btnIcon"><img src="./icons/health-icon.png" alt="Health status"></button> <!--Health meter-->
+          <button id="attend" class="btnIcon"><img src="./icons/attend-icon.png" alt="Attend"></button> <!--Attend-->
+        </div>
+      </div>
+
+      <div class="circularBtns">
+        <button id="A" class="circularBtn">A</button>
+        <button id="B" class="circularBtn" style="margin-top: 38px">B</button>
+        <button id="C" class="circularBtn">C</button>
+      </div>
+    </div>
+
+    <script src="tamagotchi.js"></script>
+    <noscript>enable JavaScript pls</noscript>
+  </body>
+</html>

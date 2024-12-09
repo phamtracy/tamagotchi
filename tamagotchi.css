@@ -1,0 +1,198 @@
+/* Custom Tamagotchi font */
+@font-face {
+  font-family: 'Tamagotchi';
+  src: url('/tamagotchi.ttf') format('truetype');
+}
+
+body {
+  background-color: rgb(182, 172, 215);
+}
+/* Egg-shape to resemble Tamagotchi device */
+.egg {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 700px;
+  max-width: calc(700px * 0.8);
+  border-radius: 60% / 70% 70% 50% 50%; 
+  background-color: rgb(129, 153, 213);
+  margin: auto;
+  margin-top: 45px; 
+  margin-bottom: 50px; 
+  box-shadow: 0 4px 6px rgba(5, 5, 50, 0.5);
+}
+
+/* Text for Tamagotchi's name */
+.tamagotchi-name {
+  font-family: 'Tamagotchi';
+  font-size: 28px;
+  font-weight: bold;
+  color: #e8e8ff;
+  text-shadow: 0 0 10px #7089ba;
+  text-align: center;
+  margin-top: 15%;
+}
+
+/* Text for Tamagotchi's age */
+.tamagotchi-age {
+  font-size: 85%;
+  font-weight: bold;
+  color: rgb(242, 240, 230);
+  text-align: left;
+  font-family: 'Roboto', sans-serif;
+  margin-right: 5%;
+}
+
+/* Tamagotchi device's screen */
+.screen {
+  display: flex;
+  flex-direction: column; /* vertically align children */
+  justify-content: space-between; /* align header and footer buttons to their respective ends */
+  height: 325px;
+  width: 300px;
+  background-color: #acaae9; 
+  border-radius: 10%;
+  margin-top: 13%;
+  margin-bottom: 2%;
+  border: 5px solid #411577;
+  box-shadow: 0 4px 6px rgba(0, 0, 128, 0.5);
+  padding: 10px, 5px; 
+  overflow: hidden; /* prevent child content from overflowing div boundaries */
+}
+ 
+/*Change font and color of status*/
+#age, #time {
+  font-family: 'Courier New';
+  font-weight: bold;
+  color: rgba(14, 14, 166, 0.5);
+
+}
+/* Upper banner icons for actions: eat, play and heal */
+.headerBtns {
+  display: flex;
+  justify-content: center;
+  width: 100%; /* divs take up entire width of their parent */
+  height: 78px; /* divs take up entire height of their parent */
+  padding-top: 10px;
+  padding-bottom: 8px;
+  border-bottom: 5px solid #f6f6f0;
+}
+
+.screenContent {
+  flex-grow: 1; /* expands div to fill available space */
+  display: flex; /* center inner tamagotchi img */
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  width: 300px;
+  height: 175px;
+}
+
+.screenContent img {
+  width: 300px;
+  height: 149px;
+  overflow: hidden;
+}
+
+.screenContent .tamagotchi-character {
+  display: flex;
+}
+
+.screenContent .foodItem {
+  width: 45px;
+  height: 45px;
+  margin: 4px;
+  padding: 4px;
+  border: 1px;
+  background: none;
+  display: none;
+} 
+
+.foodItem img {
+  width: 100%;
+  height: 100%;
+}
+
+.footerBtns {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 78px;
+  padding-top: 8px;
+  padding-bottom: 10px;
+  border-top: 5px solid #f6f6f0;
+}
+
+.headerBtns button, .footerBtns button {
+  margin: 0 20px; /* spacing between buttons */
+  border: 1px;
+  background: none; /* transparent bg */
+}
+
+.btnIcon img {
+  width: 50px;
+  height: 50px;
+  object-fit: contain; /* imgs maintain aspect ratio */
+}
+
+.circularBtns {
+  display: flex;
+  justify-content: center;
+}
+
+.circularBtn {
+  margin: 17px; /* spacing between buttons */
+  width: 62px;
+  height: 62px;
+  border-radius: 50%;
+  border-width: 8px;
+  border-color: #d6d6d2;
+  background-color: white;
+}
+
+.headerBtns button.selected, .footerBtns button.selected {
+  animation: selected 0.72s infinite;
+}
+
+@keyframes selected {
+  0% { background-color: #6b6b6b; }
+  12% { background-color: #737373; }
+  25% { background-color: #808080; }
+  38% { background-color: #919191; }
+  50% { background-color: #adadad; }
+  63% { background-color: #b1b1b1; }
+  75% { background-color: #bfbfbf; }
+  88% { background-color: #cacaca; }
+  100% { background-color: #cccccc; }
+}
+
+.screenContent .foodItem.foodSelected {
+  animation: foodSelected 0.72s infinite;
+}
+
+@keyframes foodSelected {
+  0% { background-color: #6b6b6b; }
+  12% { background-color: #737373; }
+  25% { background-color: #808080; }
+  38% { background-color: #919191; }
+  50% { background-color: #adadad; }
+  63% { background-color: #b1b1b1; }
+  75% { background-color: #bfbfbf; }
+  88% { background-color: #cacaca; }
+  100% { background-color: #cccccc; }
+}
+
+div.screenContent div.stats {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  font-size: 16px;
+  color: black;
+  font-family: 'Tamagotchi';
+  padding-top: 20px;
+  display: none;
+}
+
+#statsDisplayContainer {
+  display: none;
+}
